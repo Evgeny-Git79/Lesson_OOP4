@@ -24,6 +24,12 @@ class Task():
         self.task.append("1")
         self.task_list.insert(id-1, self.task)
 
+    def task_print_list_undone (self):
+        for task in self.task_list:
+            if task[3] == "0":
+                print(task)
+                
+
 
 id = 1
 description = "задача"
@@ -42,4 +48,6 @@ id = 2
 list.task_print_status(id)
 list.task_mark_done(id)
 list.task_print_status(id)
+
+list.task_print_list_undone()
 
